@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminUsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,11 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/admin', function() {
+    return view('layouts.admin');
+});
+
+Route::resource('admin/users', AdminUsersController::class);
 
 require __DIR__.'/auth.php';
