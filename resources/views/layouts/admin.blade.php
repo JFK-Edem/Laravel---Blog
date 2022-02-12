@@ -13,7 +13,7 @@
     <title>Admin Layout</title>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Home</a>
+            <a class="navbar-brand" href="{{ route('users.index') }}">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
                     id="sidebar">
                     <div class="text-center p-3">
                         <img src="https://www.expandgh.com/wp-content/uploads/2017/11/blog-1.jpg" alt="profile picture"
-                            class="img-fluid rounded-circle my-4 p-1 d-none d-md-block shadow" />
+                            class="img-fluid rounded-square my-4 p-1 d-none d-md-block shadow" />
                     </div>
                     <button type="button" class="navbar-toggler border-0 order-1" data-toggle="collapse"
                         data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +49,7 @@
                                 <a href="#" class="nav-link font-weight-bold"> Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-weight-bold"> Users</a>
+                                <a href="{{ route('users.create') }}" class="nav-link font-weight-bold"> Users</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link font-weight-bold"> Posts </a>

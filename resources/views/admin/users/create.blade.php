@@ -22,8 +22,8 @@
         {!! Form::select('is_active', array(1 => 'Active', 0 => 'Not Active' ), 0, ['class' => 'form-control']) !!}
     </div>
     <div class="mb-3">
-        {!! Form::label('file', 'Photo:') !!}
-        {!! Form::file('file', null, ['class' => 'form-control']) !!}
+        {!! Form::label('photo-id', 'Photo:') !!}
+        {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
     </div>
     <div class="mb-3">
         {!! Form::label('password', 'Password:') !!}
