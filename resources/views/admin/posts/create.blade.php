@@ -11,7 +11,7 @@
     </div>
     <div class="mb-3">
         {!! Form::label('category_id', 'Category:') !!}
-        {!! Form::select('category_id', array(1 => 'PHP', 2 => 'Javascript'), 1, ['class' => 'form-control']) !!}
+        {!! Form::select('category_id', array(0 => 'Choose category', 1 => 'PHP', 2 => 'Javascript', 3 => 'Laravel', 4 => 'Boostrap'), 0, ['class' => 'form-control']) !!}
     </div>
     <div class="mb-3">
         {!! Form::label('photo_id', 'Photo:') !!}
