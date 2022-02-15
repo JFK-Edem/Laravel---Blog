@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminPostsController;
 use App\Http\Controllers\AdminUsersController;
 
 /*
@@ -26,6 +27,13 @@ Route::get('/admin', function() {
     return view('layouts.admin');
 });
 
-Route::resource('admin/users', AdminUsersController::class);
+Route::group(['middleware'=>'admin'], function() {
+
+    Route::resource('admin/users', AdminUsersController::class);
+
+    Route::resource('admin/posts', AdminPostsController::class);
+
+});
+
 
 require __DIR__.'/auth.php';

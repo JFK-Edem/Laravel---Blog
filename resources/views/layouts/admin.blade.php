@@ -13,7 +13,7 @@
     <title>Admin Layout</title>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('users.index') }}">Home</a>
+            <a class="navbar-brand" href="#">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -49,10 +49,16 @@
                                 <a href="#" class="nav-link font-weight-bold"> Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('users.create') }}" class="nav-link font-weight-bold"> Users</a>
+                                <a href="{{ route('users.index') }}" class="nav-link font-weight-bold"> Users</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-weight-bold"> Posts </a>
+                                <a href="{{ route('users.create') }}" class="nav-link font-weight-bold"> Create Users</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('posts.index') }}" class="nav-link font-weight-bold"> Posts </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('posts.create') }}" class="nav-link font-weight-bold">Create Posts </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link font-weight-bold"> Categories </a>

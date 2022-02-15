@@ -40,10 +40,18 @@
     <div class="mb-3">
         {!! Form::submit('Update User', ['class' => 'btn btn-primary']) !!}
     </div>
+</div>
 
     {!! Form::close() !!}
 
-</div>
+    {!! Form::open(['method' => 'DELETE', 'action' => ['App\Http\Controllers\AdminUsersController@destroy', $user->id]]) !!}
+    @csrf
+    <div class="mb-3">
+        {!! Form::submit('Delete User', ['class' => 'btn btn-danger']) !!}
+    </div>
+    {!! Form::close() !!}
+
+
 
     @if (count($errors) > 0)
     <div class="alert alert-danger">
